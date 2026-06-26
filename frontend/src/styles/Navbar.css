@@ -60,7 +60,7 @@ padding-bottom: 0.7rem;
 
 
 .hero {
-  background-image: url('./img/bg11.jpg'); /* change path */
+  background-image: url('/img/bg11.jpg'); /* change path */
   background-size: cover;
 
   position: relative;

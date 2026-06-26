@@ -5,7 +5,7 @@ export default function Footer() {
             <footer>
                 <div class="row mx-5 pt-5">
                     <div class="col-4 contact-logo">
-                        <img src="../img/logo Vanijya.png" alt="" />
+                        <img src="/img/logo Vanijya.png" alt="" />
                     </div>
                     <div class="col-2 foot">
                         <h5 class="pb-3">Student Community</h5>

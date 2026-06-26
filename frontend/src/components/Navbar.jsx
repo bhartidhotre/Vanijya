@@ -115,7 +115,7 @@ const handleBellClick = async () => {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 logo">
-            <img src="./img/logo Vanijya.png" alt="Logo" className="h-10 w-auto" />
+            <img src="/img/logo Vanijya.png" alt="Logo" className="h-10 w-auto" />
           </Link>
         </div>
 
@@ -185,7 +185,7 @@ const handleBellClick = async () => {
         <DialogPanel className="fixed inset-y-0 right-0 w-full max-w-sm bg-white p-6 z-50">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
-              <img alt="" src="./img/logo Vanijya.png" className="h-8 w-auto" />
+              <img alt="" src="/img/logo Vanijya.png" className="h-8 w-auto" />
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} className="-m-2.5 p-2.5 text-gray-700">
               <XMarkIcon className="size-6" />

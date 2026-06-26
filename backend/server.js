@@ -24,7 +24,7 @@ const app = express();
 // Middlewares
 // ----------------------
 app.use(helmet());
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "https://vanijya-five.vercel.app" }));
 app.use(express.json());
 
 const limiter = rateLimit({ windowMs: 1 * 60 * 1000, max: 30 });
@@ -50,7 +50,7 @@ app.use("/api/notifications", notifRoutes);
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  cors: { origin: "http://localhost:5173", methods: ["GET", "POST"] },
+  cors: { origin: "https://vanijya-five.vercel.app", methods: ["GET", "POST"] },
 });
 
 // Track online users (userId -> socketId)

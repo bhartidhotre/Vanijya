@@ -19,7 +19,7 @@ export default function AboutUs() {
                     <div class="container-fluid">
                         <div class="row card">
                             <div class="col-md-6 slide-left-to-right">
-                                <img src="img/about1.avif" alt="" />
+                                <img src="/img/about1.avif" alt="" />
                             </div>
                             <div class="col-md-6 info">
                                 <h2>About Us</h2>
@@ -36,7 +36,7 @@ export default function AboutUs() {
 
                         <div class="row card reverse card-2">
                             <div class="col-md-6 slide-left-to-right">
-                                <img src="img/about2.avif" alt="" />
+                                <img src="/img/about2.avif" alt="" />
                             </div>
                             <div class="col-md-6 info">
                                 <h2>Secure Access</h2>
@@ -52,7 +52,7 @@ export default function AboutUs() {
 
                         <div class="row card card-2">
                             <div class="col-md-6 slide-left-to-right">
-                                <img src="img/about5.avif" alt="" />
+                                <img src="/img/about5.avif" alt="" />
                             </div>
                             <div class="col-md-6 info">
                                 <h2>Affordable Prices</h2>
@@ -68,7 +68,7 @@ export default function AboutUs() {
 
                         <div class="row card reverse card-2">
                             <div class="col-md-6 slide-left-to-right">
-                                <img src="img/about4.jpg" alt="" />
+                                <img src="/img/about4.jpg" alt="" />
                             </div>
                             <div class="col-md-6 info">
                                 <h2>Product Overview</h2>
