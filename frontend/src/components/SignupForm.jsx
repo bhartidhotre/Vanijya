@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 export default function SignupForm() {
   const navigate = useNavigate();
@@ -122,9 +122,9 @@ export default function SignupForm() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                  <Link to="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-2">
@@ -160,9 +160,9 @@ export default function SignupForm() {
 
           <p className="mt-10 text-center text-sm/6 text-gray-500">
             Already have a account?{' '}
-            <a href="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
+            <Link to="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
               Login
-            </a>
+            </Link>
           </p>
         </div>
       </div>

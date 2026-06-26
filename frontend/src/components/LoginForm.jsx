@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState} from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function LoginForm({ setUser }) {
   const navigate = useNavigate();
 
@@ -90,9 +90,9 @@ export default function LoginForm({ setUser }) {
                 Password
               </label>
               <div className="text-sm">
-                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                <Link to="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                   Forgot password?
-                </a>
+                </Link>
               </div>
             </div>
             <div className="mt-2">
@@ -121,9 +121,9 @@ export default function LoginForm({ setUser }) {
 
         <p className="mt-10 text-center text-sm/6 text-gray-500">
           Don't have an account?{" "}
-          <a href="/signup" className="font-semibold text-indigo-600 hover:text-indigo-500">
+          <Link to="/signup" className="font-semibold text-indigo-600 hover:text-indigo-500">
             Register
-          </a>
+          </Link>
         </p>
       </div>
     </div>
