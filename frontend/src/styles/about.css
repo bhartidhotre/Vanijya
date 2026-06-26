@@ -1,0 +1,406 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+
+.quote {
+    font-size: 42px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 150px;
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 150px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.about img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes slide-from-left {
+    0% { opacity: 0; transform: translateX(-60px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.slide-left-to-right {
+    animation: slide-from-left 0.7s ease-out forwards;
+}
+
+.info {
+    max-width: 600px;
+    font-size: 1.3rem;
+    opacity: 0;
+    animation: text-enter-left 0.8s ease-out forwards;
+}
+
+@keyframes text-enter-left {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.info p {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 500;
+}
+
+.info hr {
+    width: 40%;
+    border: none;
+    height: 3px;
+    background: black;
+    margin-top: 5px;
+}
+
+/* Responsive for ABOUT page */
+@media (max-width: 992px) {
+    .quote {
+        font-size: 32px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .info {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .info hr {
+        margin: 10px auto;
+    }
+
+    .about img {
+        max-width: 100%;
+    }
+
+    .quote {
+        font-size: 26px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .card {
+        gap: 20px;
+    }
+
+    .info p {
+        font-size: 1rem;
+    }
+}
+
+
+/* ================================
+          NAVBAR STYLE (YOUR OLD)
+================================ */
+
+.nav {
+    width: 100%;
+    background-color: white;
+    height: auto;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #ffffff, #ffedd5, #fdba74);
+    z-index: 1000;
+    position: fixed;     /* <--- makes navbar fixed at top */
+    top: 0;              /* <--- sticks navbar to the top */
+    left: 0;
+}
+
+
+/* Logo */
+.logo img {
+    width: 220px;
+}
+
+/* Desktop Menu */
+.options ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.options ul li {
+    list-style: none;
+}
+
+.options ul a {
+    text-decoration: none;
+    font-size: 1.30rem;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.options ul a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.options ul a:hover::after {
+    width: 100%;
+}
+
+/* Auth Section */
+.auth {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.30rem;
+    font-weight: 600;
+    align-items: center;
+}
+
+.auth a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.auth a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.auth a:hover::after {
+    width: 100%;
+}
+
+.icon {
+    margin-top: 5px;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media (max-width: 1000px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .options,
+    .auth {
+        display: none;
+    }
+
+    .options.active,
+    .auth.active {
+        display: block;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .options ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo img {
+        width: 170px;
+    }
+}
+
+
+/* ================================
+         CONTACT PAGE STYLING
+================================ */
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    margin-top: 90px;
+}
+
+.contact h1 {
+    font-weight: bolder;
+}
+
+.contact p {
+    font-size: 1.2rem;
+}
+
+.form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+    display: block;
+    text-align: start;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 7px;
+    border: 1px solid rgb(110, 110, 243);
+}
+
+.form textarea {
+    height: 200px;
+}
+
+.btn {
+    width: 180px;
+    height: 3.5rem;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+
+/* ================================
+          FOOTER (YOUR STYLE)
+================================ */
+
+footer {
+    padding: 40px 20px;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .row > div {
+    margin-bottom: 20px;
+}
+
+.contact-logo img {
+    max-width: 180px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+
+    footer .row > div {
+        flex: 0 0 100%;
+        margin-bottom: 25px;
+    }
+
+    .social-media span i {
+        font-size: 22px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    footer .row > div {
+        flex: 0 0 50%;
+    }
+}
+
+/* ShowProducts page style */
+.product_heading {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.product_heading h1 {
+    font-weight: bolder;
+}
+
+.product_heading p {
+    font-size: 1.2rem;
+}
+
+.search input {
+    width: 30rem;
+    height: 3.5rem;
+}
+
+.search button {
+    width: 10rem;
+    background-color: rgb(67, 153, 228);
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+}
+
+.search form  {
+    display: flex;
+    justify-self: center;
+}
+
+.row1 {
+    background-color: aquamarine;
+}

@@ -1,0 +1,184 @@
+.navbar {
+/* background: linear-gradient(to right, #fef2f2, #fecaca, #f87171); */
+background-color: white;
+padding-top: 0.7rem;
+padding-bottom: 0.7rem;
+}
+
+.option {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.option {
+  padding: 8px 14px;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background-color: #2379f047; /* light blue */
+  color: #1e3a8a; /* darker blue text */
+  box-shadow: 0 0 10px rgba(206, 210, 215, 0.6); /* blue glow */
+}
+
+.sign:hover {
+   background-color: #2379f047; /* light blue */
+  color: #1e3a8a; /* darker blue text */
+  box-shadow: 0 0 10px rgba(206, 210, 215, 0.6); /* blue glow */
+}
+
+.accIcon {
+  margin-right: 0.5rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;  /* mobile-safe */
+    background-position: top;       /* better positioning for mobile */
+  }
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+
+}
+
+
+
+
+.hero {
+  background-image: url('./img/bg11.jpg'); /* change path */
+  background-size: cover;
+
+  position: relative;
+  height: 800px;
+   display: block;  /* equivalent of d-block */
+  width: 100%; 
+  
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  
+}
+
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Darken image */
+}
+
+.hero-title {
+  position: relative;
+  
+}
+
+.hero-title h1 {
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+
+.hero-title p {
+  opacity: 0.8;
+}
+
+/* H1 typing animation */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(255,255,255,0.6);
+  animation: typing 4s steps(40, end), blinkCursor 0.6s step-end infinite;
+}
+
+/* typing animation frames */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+/* Notification Bell Container */
+.notification-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  transition: 0.2s;
+}
+
+.notification-btn:hover {
+  color: #2563eb; /* Blue hover */
+  transform: scale(1.1);
+}
+
+/* Badge Styling */
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  animation: pop 0.3s ease;
+}
+
+/* Small animation when number updates */
+@keyframes pop {
+  0% { transform: scale(0.5); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Smooth dropdown (optional if added later) */
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  width: 260px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.notification-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.notification-item:hover {
+  background: #f5f5f5;
+}

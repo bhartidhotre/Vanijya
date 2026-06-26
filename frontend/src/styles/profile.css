@@ -1,0 +1,235 @@
+/* MAIN CONTAINER */
+.profile-container {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  gap: 60px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows automatic stacking */
+  margin-top: 90px;
+}
+
+/* LEFT SIDEBAR */
+.left-box {
+  width: 280px;
+  min-width: 260px;
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #ececec;
+  margin: auto;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/149/149071.png");
+  background-size: cover;
+}
+
+/* TEXT */
+.left-box h2 {
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.left-box p {
+  color: #555;
+}
+
+/* BUTTONS */
+.logout-btn,
+.delete-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: #111;
+  color: white;
+}
+
+.delete-btn {
+  background: #e03131;
+  color: white;
+}
+
+/* RIGHT SECTION */
+.right-box {
+  flex: 1;
+  min-width: 320px;
+  max-width: 700px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid #0d6efd;
+  background: white;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #0d6efd;
+  color: white;
+}
+
+/* PROFILE SETTINGS */
+.settings-box {
+  margin-top: 25px;
+}
+
+.settings-box label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.settings-box input,
+.settings-box select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+}
+
+/* UPDATE BUTTON */
+.update-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 12px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+/* PRODUCTS */
+.products-box {
+  margin-top: 25px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background: #fff;
+  gap: 15px;
+}
+
+.product-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-product-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+}
+
+.edit-btn {
+  background: #0d6efd;
+}
+
+.delete-product-btn {
+  background: #e03131;
+}
+
+/* EMPTY MESSAGE */
+.no-products {
+  margin-top: 20px;
+  color: #777;
+  text-align: center;
+}
+
+/* -------------------------- */
+/* 📱 MOBILE RESPONSIVE FIXES */
+/* -------------------------- */
+
+@media (max-width: 900px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .right-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .tabs button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .left-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .update-btn,
+  .logout-btn,
+  .delete-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

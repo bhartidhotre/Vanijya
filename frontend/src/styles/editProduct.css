@@ -1,0 +1,78 @@
+.edit-container {
+  width: 100%;
+  height: 100vh;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.edit-card {
+  width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+.edit-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-card label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+  font-weight: 600;
+}
+
+.edit-card input,
+.edit-card textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.edit-card input:focus,
+.edit-card textarea:focus {
+  border-color: #0074ff;
+  box-shadow: 0 0 5px rgba(0, 116, 255, 0.3);
+}
+
+.edit-card textarea {
+  height: 100px;
+  resize: none;
+}
+
+.update-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0074ff;
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  font-weight: 600;
+}
+
+.update-btn:hover {
+  background: #005ed1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

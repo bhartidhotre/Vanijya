@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+
+.quote {
+    font-size: 35px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 120px;
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    padding: 80px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.card-2 {
+    margin-top: 150px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.about img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes slide-from-left {
+    0% { opacity: 0; transform: translateX(-60px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.slide-left-to-right {
+    animation: slide-from-left 0.7s ease-out forwards;
+}
+
+.info {
+    max-width: 600px;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: text-enter-left 0.8s ease-out forwards;
+}
+
+@keyframes text-enter-left {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.info p {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 500;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+}
+
+.info hr {
+    width: 40%;
+    border: none;
+    height: 3px;
+    background: black;
+    margin-top: 5px;
+}
+
+/* Responsive for ABOUT page */
+@media (max-width: 992px) {
+    .quote {
+        font-size: 32px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .info {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .info hr {
+        margin: 10px auto;
+    }
+
+    .about img {
+        max-width: 100%;
+    }
+
+    .quote {
+        font-size: 26px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .card {
+        gap: 20px;
+    }
+
+    .info p {
+        font-size: 1rem;
+    }
+}

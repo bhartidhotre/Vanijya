@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>About</title>
+    <link rel="stylesheet" href="./src/styles/about.css">
+</head>
+
+<body>
+   <!-- NAVBAR -->
+    <header>
+        <div class="nav">
+
+            <div class="logo">
+                <img src="img/logo campusmart (2).png" alt="">
+            </div>
+
+            <div class="options">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="auth">
+                <i class="fa-solid fa-user icon"></i>
+                <div class="login"><a href="login.html">Log In</a></div>
+                |
+                <div class="signup"><a href="sign.css">Register</a></div>
+            </div>
+
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="quote">
+        <i class="fa-solid fa-quote-left"></i>
+        Why let good things gather dust, when they can help someone start fresh?
+        <i class="fa-solid fa-quote-right"></i>
+    </div>
+    <br> <br> <br>
+    <hr>
+    <section class="about">
+        <div class="about-wrapper">
+            <div class="container-fluid">
+                <div class="row card">
+                    <div class="col-md-6 slide-left-to-right">
+                        <img src="img/about1.avif" alt="">
+                    </div>
+                    <div class="col-md-6 info">
+                         <h2>About Us</h2>
+                         <hr>
+                        <p>CampusMart was created with one simple idea —
+                            students shouldn’t have to overspend on items
+                            that seniors no longer need.
+                            Every product shared here gets a new life,
+                            reducing waste and saving money for juniors.
+                            It’s more than a marketplace — it’s a smarter way
+                            for students to support each other.</p>
+                    </div>
+                </div>
+
+                <div class="row card reverse">
+                    <div class="col-md-6 slide-left-to-right">
+                        <img src="img/about2.avif" alt="">
+                    </div>
+                    <div class="col-md-6 info">
+                        <h2>Secure Access</h2>
+                        <hr>
+                        <p>CampusMart ensures a safe and authentic community
+                            by allowing only students with official college email IDs to register.
+                            This guarantees that every buyer and seller is a genuine member
+                            of your campus, creating a trusted environment for transactions.
+                            No outsiders, no fake accounts — only your own college community.
+                            Your campus stays protected, and your experience stays secure.</p>
+                    </div>
+                </div>
+
+                <div class="row card">
+                    <div class="col-md-6 slide-left-to-right">
+                        <img src="img/about5.avif" alt="">
+                    </div>
+                    <div class="col-md-6 info">
+                        <h2>Affordable Prices</h2>
+                        <hr>
+                        <p>College life can be expensive, but CampusMart keeps it simple.
+                            All products listed by seniors are offered at prices
+                            much lower than their original cost,
+                            making essentials accessible to every student.
+                            From textbooks to hostel items, everything is budget-friendly
+                            so juniors can start their journey without financial stress.</p>
+                    </div>
+                </div>
+
+                <div class="row card reverse">
+                    <div class="col-md-6 slide-left-to-right">
+                        <img src="img/about4.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 info">
+                        <h2>Product Overview</h2>
+                        <hr>
+                        <p>Every item sold on CampusMart includes clear and complete details
+                            such as product name, owner’s name, description, condition, and price.
+                            This helps students understand exactly what they are buying
+                            before making any decision.
+                            Transparent information builds trust between seniors and juniors,
+                            so every purchase feels confident and worry-free.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <script>
+        const ham = document.querySelector(".hamburger");
+        const options = document.querySelector(".options");
+        const auth = document.querySelector(".auth");
+
+        ham.addEventListener("click", () => {
+            options.classList.toggle("active");
+            auth.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
