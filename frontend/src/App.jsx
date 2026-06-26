@@ -8,7 +8,6 @@ import Products from "./components/Products";
 import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import EditProduct from "./components/EditProduct";
-
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import ProductPage from "./pages/ProductPage";
