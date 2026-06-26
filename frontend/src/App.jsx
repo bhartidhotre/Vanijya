@@ -13,7 +13,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import ProductPage from "./pages/ProductPage";
 import Add_Item from "./pages/AddProductPage"; 
-import AddProduct from "./components/addProduct";
+import AddProduct from "./components/AddProduct";
 import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import ItemPage from "./pages/ItemPage";
