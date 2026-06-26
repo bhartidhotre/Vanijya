@@ -12,7 +12,7 @@ export default function OwnerNotifications({ currentUser }) {
   useEffect(() => {
     if (!currentUser) return;
     // load notifications
-    axios.get(`http://localhost:5000/api/notifications/${currentUser._id}`, { headers: { 'x-user-id': currentUser._id } })
+    axios.get(`https://vanijya.onrender.com/api/notifications/${currentUser._id}`, { headers: { 'x-user-id': currentUser._id } })
       .then(res => setNotifs(res.data))
       .catch(err => console.error(err));
 
@@ -34,10 +34,10 @@ export default function OwnerNotifications({ currentUser }) {
   const open = async (notif) => {
     // mark read in backend (optional)
     try {
-      await axios.put(`http://localhost:5000/api/notifications/mark-read/${notif._id}`, {}, { headers: { 'x-user-id': currentUser._id } });
+      await axios.put(`https://vanijya.onrender.com/api/notifications/mark-read/${notif._id}`, {}, { headers: { 'x-user-id': currentUser._id } });
     } catch (e) {}
     // fetch or create chat info: we have chat id in notif.chat
-    const chatRes = await axios.get(`http://localhost:5000/api/chats/${notif.chat}`, { headers: { 'x-user-id': currentUser._id } }).catch(()=>null);
+    const chatRes = await axios.get(`https://vanijya.onrender.com/api/chats/${notif.chat}`, { headers: { 'x-user-id': currentUser._id } }).catch(()=>null);
 
     // fetch fromUser details: notif.fromUser comes as id or object
     const other = { _id: notif.fromUser, name: notif.fromUserName || (notif.fromUser?.name || 'User') };

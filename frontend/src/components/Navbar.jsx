@@ -29,7 +29,7 @@ export default function Navbar({ user, setUser }) {
     const fetchNotifications = async () => {
       try {
 
-        const res = await axios.get(`http://localhost:5000/api/notifications/${user._id}`);
+        const res = await axios.get(`https://vanijya.onrender.com/api/notifications/${user._id}`);
 
         // map text -> message and populate senderName
         const mapped = res.data.map(n => ({
@@ -52,7 +52,7 @@ export default function Navbar({ user, setUser }) {
   useEffect(() => {
     if (!user?._id) return;
     if (!socketRef.current) {
-      socketRef.current = io("http://localhost:5000");
+      socketRef.current = io("https://vanijya.onrender.com");
     }
 
     const socket = socketRef.current;
@@ -88,7 +88,7 @@ const handleBellClick = async () => {
         notifications
           .filter(n => !n.isRead)
           .forEach(async (n) => {
-            await axios.put(`http://localhost:5000/api/notifications/mark-read/${n._id}`);
+            await axios.put(`https://vanijya.onrender.com/api/notifications/mark-read/${n._id}`);
           });
         setNotifications(prevNotifs => prevNotifs.map(n => ({ ...n, isRead: true })));
       } catch (err) {

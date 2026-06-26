@@ -22,7 +22,7 @@ socket.emit("setup", currentUser._id);
 
     // fetch chat history
     axios
-      .get(`http://localhost:5000/api/chats/${chatId}`, {
+      .get(`https://vanijya.onrender.com/api/chats/${chatId}`, {
         headers: { "x-user-id": currentUser._id },
       })
       .then((res) => setMessages(res.data.messages || []))

@@ -17,7 +17,7 @@ export default function EditProduct() {
   // Fetch product
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`https://vanijya.onrender.com/api/products/${id}`)
       .then((res) => setForm(res.data))
       .catch((err) => console.log(err));
   }, [id]);
@@ -29,7 +29,7 @@ export default function EditProduct() {
   const updateProduct = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/products/edit/${id}`,
+        `https://vanijya.onrender.com/api/products/edit/${id}`,
         form,
         {
           headers: {

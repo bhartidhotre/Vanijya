@@ -54,7 +54,7 @@ export default function AddProduct() {
         ownerName: user.name,
       };
 
-      await axios.post("http://localhost:5000/api/products/add", productData, {
+      await axios.post("https://vanijya.onrender.com/api/products/add", productData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

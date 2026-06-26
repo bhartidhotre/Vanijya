@@ -24,7 +24,7 @@ export default function Profile() {
 
     // GET USER INFO
     axios
-      .get("http://localhost:5000/api/auth/me", {
+      .get("https://vanijya.onrender.com/api/auth/me", {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -41,7 +41,7 @@ export default function Profile() {
 
     // GET USER'S PRODUCTS
     axios
-      .get("http://localhost:5000/api/products/my-products/list", {
+      .get("https://vanijya.onrender.com/api/products/my-products/list", {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -54,7 +54,7 @@ export default function Profile() {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        "http://localhost:5000/api/products/edit/${id}",
+        "https://vanijya.onrender.com/api/products/edit/${id}",
         form,
         {
           headers: {
@@ -75,7 +75,7 @@ export default function Profile() {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/products/delete/${id}`, {
+      await axios.delete(`https://vanijya.onrender.com/api/products/delete/${id}`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -92,7 +92,7 @@ export default function Profile() {
     if (!window.confirm("Are you sure? This action cannot be undone.")) return;
 
     try {
-      await axios.delete("http://localhost:5000/api/auth/delete", {
+      await axios.delete("https://vanijya.onrender.com/api/auth/delete", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },

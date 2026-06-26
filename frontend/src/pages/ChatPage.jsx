@@ -21,7 +21,7 @@ export default function ChatPage() {
     if (chatIdFromUrl) return;
 
     axios
-      .post("http://localhost:5000/api/chats/create", {
+      .post("https://vanijya.onrender.com/api/chats/create", {
         productId: productId,
         customerId: userId,
       })

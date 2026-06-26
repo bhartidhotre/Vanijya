@@ -29,7 +29,7 @@ export default function SignupForm() {
     setSuccess("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
+      const res = await axios.post("https://vanijya.onrender.com/api/auth/register", {
         prn: form.prn,
         name:form.username,
         email:form.email,
